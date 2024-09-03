@@ -33,6 +33,9 @@ app.get('/about', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login');
 });
+app.get('/home', (req, res) => {
+    res.render('home');
+});
 
 app.get('/sign', (req, res) => {
     res.render('sign');
@@ -50,7 +53,7 @@ app.post('/login', async (req, res) => {
             });
 
             const registered = await registerEmployee.save();
-            res.status(200).render('about');
+            res.status(200).render('home');
 
     } catch (error) {
         res.status(400).send(error);
@@ -67,7 +70,7 @@ app.post('/sign', async (req, res) => {
         const username = await Register.findOne({email:email})
 
         if(username.password===password){
-            res.render('about');
+            res.render('home');
         }
         else{
             res.status(400).send(error);
