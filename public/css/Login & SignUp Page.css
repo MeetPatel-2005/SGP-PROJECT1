@@ -181,6 +181,7 @@ form.sign-in-form {
   width: 100%;
   transition: transform 1.1s ease-in-out;
   transition-delay: 0.4s;
+  border-radius: 1rem;
 }
 
 .panel {
