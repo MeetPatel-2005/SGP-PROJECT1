@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
-const partial_path = path.join(__dirname, "../templates/views/partials");
+const partial_path = path.join(__dirname, "../templates/partials");
 //E:\WEBDEVELOPMENT PROJECTS\new project\SGP-PROJECT1\templates\views\partials
 console.log(partial_path);
 console.log(template_path);
@@ -23,7 +23,7 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(partial_path);
 
 app.get('/', (req, res) => {
-    res.render('about');
+    res.render('home');
 });
 
 app.get('/about', (req, res) => {

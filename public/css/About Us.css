@@ -297,7 +297,7 @@ hr {
         margin: 6px;
     }
 
-    .links.active {
+    .links .active {
         height: 10rem;
         background-color: #1a2238;
     }
@@ -314,7 +314,7 @@ hr {
         overflow: hidden;
     }
 
-    .links.active ul {
+    .links .active ul {
         opacity: 1;
     }
 
