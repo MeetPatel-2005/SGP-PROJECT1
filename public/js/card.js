@@ -1,5 +1,3 @@
-console.log("Hello Malay Chut")
-
 class Card {
   constructor({
     imageUrl,
