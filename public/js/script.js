@@ -16,7 +16,7 @@ const dislike = document.querySelector('#dislike');
 
 
 const urls = [
-  "https://github.com/MeetPatel-2005/SGP-PROJECT1/blob/main/public/images/nike.png?raw=true",
+  "https://github.com/MeetPatel-2005/SGP-PROJECT1/blob/main/public/images/2.png?raw=true",
   "https://images.unsplash.com/photo-1562514947-bf9cf8e45d4a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1707620304878-b7d6873207f2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://plus.unsplash.com/premium_photo-1665413642308-c5c1ed052d12?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
