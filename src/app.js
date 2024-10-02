@@ -5,7 +5,7 @@ const app = express();
 const hbs = require('hbs');
 const path = require('path');
 const bcrypt = require('bcryptjs')
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 6500;
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
