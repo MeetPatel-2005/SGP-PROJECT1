@@ -72,8 +72,11 @@
                     <h2>Contact Us</h2>
                </div>
                <hr>
-               <div class="ContactUs-content">
-                    <div class="cards">
+               <div class="container">
+                    <div class="card" style="--clr: #0f0;"></div>
+                    <div class="card" style="--clr: #ff0;"></div>
+                    <div class="card" style="--clr: red;"></div>
+                    {{!-- <div class="card">
                          <div id="card-1">
                               <div class="dev-photo">
                                    <img src=".\images\DevPhoto.webp" alt="">
@@ -107,11 +110,27 @@
                                    <p id="dev-contactno">Contact : 1234567890</p>
                               </div>
                          </div>
-                    </div>
+                    </div> --}}
                </div>
           </div>
      </div>
 
+     <script>
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('mousemove', function (e) {
+                let rect = card.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                let y = e.clientY - rect.top;
+
+                // Update the position of the gradient based on mouse position
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+            });
+        });
+    </script>
+    
      <script src="./js/hamburger.js"></script>
 </body>
 

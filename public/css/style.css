@@ -10,6 +10,7 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  background-color: #222;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #f0f0f0; /* Fallback background */
+  background-color: rgb(rgb(91, 39, 39), green, blue); /* Fallback background */
 }
 
 .navbar {
@@ -27,7 +28,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.25rem 3rem;
-  background-color: #1a2238;
+  background-color: #1d1c1c;
   position: fixed;
   top: 0;
   left: 0;

@@ -37,6 +37,10 @@ app.get('/home', (req, res) => {
     res.render('home');
 });
 
+app.get('/Cart', (req, res) => {
+    res.render('Cart');
+});
+
 app.get('/sign', (req, res) => {
     res.render('sign');
 });
