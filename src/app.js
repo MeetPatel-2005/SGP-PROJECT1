@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs');
 const db = require('./firebase'); // Firebase connection
 const hbs = require('hbs');
 const path = require('path');
-const PORT = process.env.PORT || 6500;
+const PORT = process.env.PORT || 7500;
 
 const app=express();
 
