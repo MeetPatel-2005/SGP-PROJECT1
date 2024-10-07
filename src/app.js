@@ -20,7 +20,7 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(partial_path);
 
 // Render pages
-app.get('/', (req, res) => res.render('home'));
+app.get('/', (req, res) => res.render('login'));
 app.get('/about', (req, res) => res.render('about'));
 app.get('/login', (req, res) => res.render('login'));
 app.get('/home', (req, res) => res.render('home'));
@@ -72,6 +72,7 @@ app.post('/sign', async (req, res) => {
       // Compare password
       const validPassword = await bcrypt.compare(password, user.password);
       if (validPassword) {
+        return res.render('home', { user: { name: user.name, email: user.email } }); // Pass user data to the home page
         res.render('home');
       } else {
         res.status(400).send("Invalid password");

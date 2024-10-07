@@ -1,0 +1,138 @@
+[33mcommit bfdf9ce6a06e1564d23e77cd184947032911a93a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Mon Oct 7 12:53:01 2024 +0530
+
+    Remove serviceAccountkey.json
+
+[33mcommit 2cfa66d15a3bab1596046fbe358fae526b98332d[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Mon Oct 7 12:45:42 2024 +0530
+
+    firebase
+
+[33mcommit 123c0e6b40185cb0d1ff7134c9a21f158073723a[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Mon Oct 7 12:44:49 2024 +0530
+
+    firebase added
+
+[33mcommit 5c23aba72108e6d2076ff81497589c9103b67fe1[m
+Author: Jay9115 <pateljay091105@gmail.com>
+Date:   Mon Oct 7 11:43:49 2024 +0530
+
+    backend connect
+
+[33mcommit b9b98b709df327d83e53b602be34bf30e6fba84a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: MeetPatel-2005 <23dcs085@charusat.edu.in>
+Date:   Sun Oct 6 14:37:09 2024 +0530
+
+    Updated By Meet
+
+[33mcommit 40fec1cf52c46d9cae37dd47db0052b56740e677[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Wed Oct 2 14:37:57 2024 +0530
+
+    image added
+
+[33mcommit caea38d7c4db2a1e3892c7392613116756b57c6f[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Wed Oct 2 14:31:02 2024 +0530
+
+    images
+
+[33mcommit 1f957e714e7b11047ac0dbd236d1e377f6b334b9[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Wed Oct 2 13:23:17 2024 +0530
+
+    try
+
+[33mcommit f434ae1d0d3e09df0b69acb5a772a801686196cb[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Wed Oct 2 13:20:38 2024 +0530
+
+    try images
+
+[33mcommit 0fb14044705e08e268d49a1f5ebe732b4faa1c70[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Mon Sep 30 09:41:22 2024 +0530
+
+    font added
+
+[33mcommit 6743ee9848c16d428bc4b95238629412dc75ab53[m
+Merge: 190a5d7 5dd79ce
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Mon Sep 30 09:21:36 2024 +0530
+
+    hjdg
+
+[33mcommit 190a5d7b58b12199f2f232bad6378cb97ee46211[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Mon Sep 30 09:19:22 2024 +0530
+
+    hello
+
+[33mcommit 5dd79ce95dd25bf04270bd7a5f01595c5a78839d[m
+Author: MeetPatel-2005 <23dcs085@charusat.edu.in>
+Date:   Mon Sep 30 09:16:28 2024 +0530
+
+    Updated Swiper
+
+[33mcommit 540c77ef1a8397492f2f97e1a1aabb62c12f357b[m
+Author: MeetPatel-2005 <23dcs085@charusat.edu.in>
+Date:   Sat Sep 28 16:12:07 2024 +0530
+
+    Added Card Swiper
+
+[33mcommit 82bd8cec923994c12bc6aabd796e3d2350f8e350[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Tue Sep 10 15:49:08 2024 +0530
+
+    Minor changes and bootstrap removed
+
+[33mcommit f7d73423ecdad9a675722a7d3e00a96370025ba6[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Mon Sep 9 18:59:06 2024 +0530
+
+    partial file added
+
+[33mcommit 0aa59c145710716896e94e6efa580a85ea1ab22d[m
+Author: Rudrapatel2005 <rudra61005@gmail.com>
+Date:   Wed Sep 4 12:40:31 2024 +0530
+
+    add images to card
+
+[33mcommit ad0b88fed25e367d9f7d657e93eac1b2fe645aae[m
+Author: MeetPatel-2005 <pmalay694@gmail.com>
+Date:   Wed Sep 4 11:10:39 2024 +0530
+
+    carosuel
+
+[33mcommit f6efaadbd60dd8cc7d3082fd2fcbbf23b630b0ad[m
+Author: MeetPatel-2005 <23dcs085@charusat.edu.in>
+Date:   Tue Sep 3 23:08:54 2024 +0530
+
+    added images
+
+[33mcommit edfe6caeac30db1a0a7dd5a011ea24e82c0783b4[m
+Author: Rudrapatel2005 <rudra61005@gmail.com>
+Date:   Tue Sep 3 21:11:21 2024 +0530
+
+    color changed
+
+[33mcommit 3aacae7842579966cc8878fda8337b6c102d4234[m
+Author: Rudrapatel2005 <rudra61005@gmail.com>
+Date:   Tue Sep 3 20:52:13 2024 +0530
+
+    Page home created
+
+[33mcommit 2a3f3b433149109782cb54b1b9a4454dea967861[m
+Author: Krishilgithub <100427701+Krishilgithub@users.noreply.github.com>
+Date:   Tue Sep 3 18:55:52 2024 +0530
+
+    Done by Krishil
+
+[33mcommit 6e0384563bcb0dce61e99e284a6c458498edd2c4[m
+Author: MeetPatel-2005 <23dcs085@charusat.edu.in>
+Date:   Tue Sep 3 18:46:18 2024 +0530
+
+    Create README.md

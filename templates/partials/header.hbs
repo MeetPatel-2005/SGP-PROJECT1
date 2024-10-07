@@ -10,10 +10,10 @@
                </div>
                <div class="links">
                     <ul>
-                         <li id="Home"><a href="http://localhost:7500/home">Home</a></li>
-                         <li id="AboutUS"><a href="http://localhost:7500/about">About Us</a></li>
-                         <li id="Cart"><a href="http://localhost:7500/Cart">Cart</a></li>
-                         <li id="Cart"><a href="http://localhost:7500/login">Login</a></li>
+                         <li id="Home"><a href="home">Home</a></li>
+                         <li id="AboutUS"><a href="about">About Us</a></li>
+                         <li id="Cart"><a href="Cart">Cart</a></li>
+                         <li id="Cart"><a href="login">Login</a></li>
                          <li id="Profile"><a href="#Profile.html">Profile</a></li>
                     </ul>
 </div>
@@ -22,10 +22,10 @@
      <img src="./images/DevPhoto.webp" alt="">
      <div class="user_detail">
           <div id="user_name">
-               <p>Name: <span>Hello World</span></p>
+               <p>Name: <span>{{user.name}}</span></p>
           </div>
           <div id="user_email">
-               <p>Email: <span>hello@gmail.com</span></p>
+               <p>Email: <span>{{user.email}}</span></p>
           </div>
      </div>
 </div>
