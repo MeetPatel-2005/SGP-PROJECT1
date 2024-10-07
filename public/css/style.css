@@ -34,6 +34,64 @@ body {
   left: 0;
   z-index: 2;
 }
+.profile{
+  display: flex;
+  flex-direction: column;
+  top: 6rem;
+  right: 2rem;
+  width: 25rem;
+  height: 17rem;
+  position: absolute;
+  border: 2px solid rgb(13, 13, 13);
+  border-radius: 10px 10px 50% 50%;
+  z-index: 99;
+  background-color: #1b1b1b;
+  /* display: none;  Initially hidden */
+  transform: translateY(-20px); /* Offscreen (upwards) */
+  opacity: 0; /* Fully transparent */
+  transition: transform 0.25s ease, opacity 0.25s ease; /* Smooth transition for transform and opacity */
+}
+.profile.active {
+  display: flex; /* Make it visible */
+  transform: translateY(0); /* Bring it back to the original position */
+  opacity: 1; /* Fully opaque */
+}
+
+.profile img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7rem;
+  object-fit: contain;
+  margin-top: 1rem;
+}
+.profile .user_detail::before{
+  position: absolute;
+  content: "";
+  width: 20rem;
+  top: -13px;
+  border-radius: 30px;
+  border: 2px solid rgb(37, 37, 37)
+
+}
+.profile .user_detail{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.75rem 2rem;
+}
+.profile #user_name{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+.profile #user_email{
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
 
 .logo {
   display: flex;
