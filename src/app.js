@@ -24,7 +24,7 @@ app.get('/', (req, res) => res.render('login'));
 app.get('/about', (req, res) => res.render('about'));
 app.get('/login', (req, res) => res.render('login'));
 app.get('/home', (req, res) => res.render('home'));
-app.get('/Cart', (req, res) => res.render('Cart'));
+app.get('/Cart', (req, res) => res.render('home'));
 app.get('/sign', (req, res) => res.render('sign'));
 
 // Registration (Sign Up) Handler
