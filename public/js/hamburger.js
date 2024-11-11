@@ -12,6 +12,13 @@ hamburger = document.querySelector(".hamburger");
     profileToggle.onclick = function () {
         profile.classList.toggle("active");
     };
+
+    let cartToggle = document.querySelector("#Cart");
+    let cart = document.querySelector(".cart");
+    
+    cartToggle.onclick = function () {
+        cart.classList.toggle("active");
+    };
     
     // This script assumes you have a method to fetch user data
 function updateProfile(user) {

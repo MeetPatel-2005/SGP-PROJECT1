@@ -92,7 +92,32 @@ body {
   color: white;
   margin-bottom: 10px;
 }
+/* cart  */
+.cart{
+  display: flex;
+  flex-direction: column;
+  top: 6rem;
+  right: 2rem;
+  width: 25rem;
+  height: 17rem;
+  position: absolute;
+  border: 2px solid rgb(13, 13, 13);
+  border-radius: 10px 10px;
+  z-index: 99;
+  background-color: #1b1b1b;
+  /* display: none;  Initially hidden */
+  transform: translateY(-20px); /* Offscreen (upwards) */
+  opacity: 0; /* Fully transparent */
+  transition: transform 0.25s ease, opacity 0.25s ease; /* Smooth transition for transform and opacity */
+}
+.cart.active {
+  display: flex; /* Make it visible */
+  transform: translateY(0); /* Bring it back to the original position */
+  opacity: 1; /* Fully opaque */
+}
 
+
+/* cart end */
 .logo {
   display: flex;
   justify-content: center;
