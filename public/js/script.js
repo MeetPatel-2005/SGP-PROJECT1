@@ -66,3 +66,88 @@ for (let i = 0; i < 5; i++) {
 
 
 
+//heiroufdeairhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+// DOM elements
+
+const cartContainer = document.querySelector('.cart');
+const cartInfoContainer = document.querySelector('.cartinfo');
+
+let cartItems = {};
+
+// Update cart display function
+function updateCartDisplay() {
+  cartInfoContainer.innerHTML = ''; // Clear current items
+
+  Object.entries(cartItems).forEach(([name, { price, quantity }]) => {
+    const itemDiv = document.createElement('div');
+    itemDiv.classList.add('cart-item');
+    itemDiv.innerHTML = `
+      <p>${name}</p>
+      <p>Rs.${price}</p>
+      <p>${quantity}</p>
+      <button class="increment">+</button>
+      <button class="decrement">-</button>
+      <button class="delete">Delete</button>
+    `;
+
+    // Attach event listeners for increment, decrement, delete
+    itemDiv.querySelector('.increment').onclick = () => {
+      cartItems[name].quantity++;
+      updateCartDisplay();
+    };
+    itemDiv.querySelector('.decrement').onclick = () => {
+      if (cartItems[name].quantity > 1) {
+        cartItems[name].quantity--;
+      } else {
+        delete cartItems[name];
+      }
+      updateCartDisplay();
+    };
+    itemDiv.querySelector('.delete').onclick = () => {
+      delete cartItems[name];
+      updateCartDisplay();
+    };
+
+    cartInfoContainer.appendChild(itemDiv);
+  });
+}
+
+// Function to add item to cart on "like" action
+function addItemToCart(name, price) {
+  if (cartItems[name]) {
+    cartItems[name].quantity++;
+  } else {
+    cartItems[name] = { price, quantity: 1 };
+  }
+  updateCartDisplay();
+}
+
+// Modify the appendNewCard function to pass the image name
+function appendNewCard() {
+  const imageUrl = urls[cardCount % 10]; // Get the current image URL
+  const imageName = `Item ${cardCount % 10 + 1}`; // You can extract a custom name from the URL if preferred
+  
+  const card = new Card({
+    imageUrl: imageUrl,
+    onDismiss: appendNewCard,
+    onLike: () => {
+      like.style.animationPlayState = 'running';
+      like.classList.toggle('trigger');
+
+      // Pass the image name as the item name
+      const itemPrice = 4543; // Set a fixed or dynamic price
+      addItemToCart(imageName, itemPrice); // Add item to cart with extracted name
+    },
+    onDislike: () => {
+      dislike.style.animationPlayState = 'running';
+      dislike.classList.toggle('trigger');
+    }
+  });
+
+  swiper.append(card.element);
+  cardCount++;
+}
+
+
+
+
