@@ -97,7 +97,7 @@ body {
 .cart {
   top: 6rem;
   right: 28rem;
-  width: 28rem;
+  width: 30rem;
   max-height: 50vh; /* Limit the height of the cart */
   position: absolute;
   border: 2px solid rgb(13, 13, 13);
