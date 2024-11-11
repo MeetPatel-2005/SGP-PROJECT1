@@ -142,10 +142,21 @@ body {
 
 .buy {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 1rem 0;
 }
 
+.buy p{
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 25px;
+}
+.buy span{
+  color: green;
+}
 .buy button {
   padding: 0.6rem 1.2rem;
   background-color: #444;

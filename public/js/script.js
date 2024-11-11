@@ -1,20 +1,10 @@
-// DOM
-
+// DOM Elements
 console.log("hi")
 const swiper = document.querySelector('#swiper');
 const like = document.querySelector('#like');
 const dislike = document.querySelector('#dislike');
 
-// constants
-// const urls = [
-//   'https://source.unsplash.com/random/1000x1000/?sky',
-//   'https://source.unsplash.com/random/1000x1000/?landscape',
-//   'https://source.unsplash.com/random/1000x1000/?ocean',
-//   'https://source.unsplash.com/random/1000x1000/?moutain',
-//   'https://source.unsplash.com/random/1000x1000/?forest'
-// ];
-
-
+// URLs of images
 const urls = [
   "https://github.com/MeetPatel-2005/SGP-PROJECT1/blob/main/public/images/1.png?raw=true",
   "https://github.com/MeetPatel-2005/SGP-PROJECT1/blob/main/public/images/2.png?raw=true",
@@ -26,57 +16,33 @@ const urls = [
   "https://github.com/MeetPatel-2005/SGP-PROJECT1/blob/main/public/images/8.png?raw=true",
   "https://github.com/MeetPatel-2005/SGP-PROJECT1/blob/main/public/images/9.png?raw=true",
   "https://github.com/MeetPatel-2005/SGP-PROJECT1/blob/main/public/images/10.png?raw=true"
- 
 ];
 
+// Item prices for each shoe
+const itemPrices = [9695, 10795, 11495, 7495, 6999, 3249, 11999, 12999, 11999, 5999];
 
-// variables
+// Item names for each shoe
+const itemNames = [
+  "Nike Ishod", "Nike TR 1", "Freak 5 EP", "Nike SB", "Suede Sneakers", 
+  "Puma Amaze", "Puma X Kidsuper", "Gazelle 85", "Supernova Stride", "Breaknet 2.0"
+];
+
+// Variables
 let cardCount = 0;
-console.log(urls[cardCount % urls.length]);
-// functions
-function appendNewCard() {
-  const card = new Card({
-    imageUrl: urls[cardCount % 10],
-    onDismiss: appendNewCard,
-    onLike: () => {
-      like.style.animationPlayState = 'running';
-      like.classList.toggle('trigger');
-    },
-    onDislike: () => {
-      dislike.style.animationPlayState = 'running';
-      dislike.classList.toggle('trigger');
-    }
-    
-  });
-  
-  swiper.append(card.element);
-  cardCount++;
+let cartTotal = 0; // Track the total price of items in the cart
 
-  const cards = swiper.querySelectorAll('.card:not(.dismissing)');
-  cards.forEach((card, index) => {
-    card.style.setProperty('--i', index);
-  });
-}
-
-// first 5 cards
-for (let i = 0; i < 5; i++) {
-  appendNewCard();
-}
-
-
-
-
-//heiroufdeairhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-// DOM elements
-
+// Update the cart display
 const cartContainer = document.querySelector('.cart');
 const cartInfoContainer = document.querySelector('.cartinfo');
+const totalDisplay = document.querySelector('.buy span'); // Total price display element
 
 let cartItems = {};
 
-// Update cart display function
 function updateCartDisplay() {
   cartInfoContainer.innerHTML = ''; // Clear current items
+
+  // Reset the cart total to 0
+  cartTotal = 0;
 
   Object.entries(cartItems).forEach(([name, { price, quantity }]) => {
     const itemDiv = document.createElement('div');
@@ -90,19 +56,26 @@ function updateCartDisplay() {
       <button class="delete">Delete</button>
     `;
 
-    // Attach event listeners for increment, decrement, delete
+    // Update the total price based on current quantity
+    cartTotal += price;
+
+    // Set up the event listeners
     itemDiv.querySelector('.increment').onclick = () => {
       cartItems[name].quantity++;
+      cartItems[name].price = itemPrices[itemNames.indexOf(name)] * cartItems[name].quantity; // Update price based on quantity
       updateCartDisplay();
     };
+
     itemDiv.querySelector('.decrement').onclick = () => {
       if (cartItems[name].quantity > 1) {
         cartItems[name].quantity--;
       } else {
         delete cartItems[name];
       }
+      cartItems[name].price = itemPrices[itemNames.indexOf(name)] * cartItems[name].quantity; // Update price based on quantity
       updateCartDisplay();
     };
+
     itemDiv.querySelector('.delete').onclick = () => {
       delete cartItems[name];
       updateCartDisplay();
@@ -110,33 +83,42 @@ function updateCartDisplay() {
 
     cartInfoContainer.appendChild(itemDiv);
   });
+
+  // Update the total price in the cart
+  totalDisplay.innerText = `Rs.${cartTotal}`;
 }
 
-// Function to add item to cart on "like" action
+// Function to add item to the cart
 function addItemToCart(name, price) {
   if (cartItems[name]) {
     cartItems[name].quantity++;
   } else {
     cartItems[name] = { price, quantity: 1 };
   }
+
+  // Update price based on quantity
+  cartItems[name].price = itemPrices[itemNames.indexOf(name)] * cartItems[name].quantity;
+  
+  console.log(`Added ${name} to cart with price: Rs.${cartItems[name].price}`);
   updateCartDisplay();
 }
 
-// Modify the appendNewCard function to pass the image name
+// Function to append a new card
 function appendNewCard() {
   const imageUrl = urls[cardCount % 10]; // Get the current image URL
-  const imageName = `Item ${cardCount % 10 + 1}`; // You can extract a custom name from the URL if preferred
-  
+  const imageName = itemNames[cardCount % 10]; // Use the name from the itemNames array
+  const itemPrice = itemPrices[cardCount % 10]; // Get price from itemPrices array
+
   const card = new Card({
     imageUrl: imageUrl,
     onDismiss: appendNewCard,
     onLike: () => {
+      console.log(`Liked: ${imageName} with price Rs.${itemPrice}`); // Debugging log
       like.style.animationPlayState = 'running';
       like.classList.toggle('trigger');
 
-      // Pass the image name as the item name
-      const itemPrice = 4543; // Set a fixed or dynamic price
-      addItemToCart(imageName, itemPrice); // Add item to cart with extracted name
+      // Add item to cart with its name and price
+      addItemToCart(imageName, itemPrice); 
     },
     onDislike: () => {
       dislike.style.animationPlayState = 'running';
@@ -148,4 +130,7 @@ function appendNewCard() {
   cardCount++;
 }
 
-
+// Initial cards
+for (let i = 0; i < 5; i++) {
+  appendNewCard();
+}
